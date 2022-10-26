@@ -185,7 +185,7 @@ function result(data){
             <li>Email : ${data[0].email}</li>
             <li>Date Of Birth : ${data[4].dob}</li>
             <li>Phone Number : ${data[5].phone}</li>
-            <li>Address : ${data[6].Address}</li>
+            <li>Address : ${data[6].address}</li>
         </ul>
         <button type="submit" class="submit-btn" onclick="submitbtn()">Apply Now</button>
     `;
