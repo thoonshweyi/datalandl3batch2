@@ -20,10 +20,10 @@
                     <button type="button" class="btn btn-outline-secondary rounded-0" title="Line Throuth Text" data-command="strikeThrough">LineThrough</button>
 
                     
-                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Left Align"><i class="fas fa-align-left"></i></button>
-                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Center Align"><i class="fas fa-align-center"></i></button>
-                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Right Align"><i class="fas fa-align-right"></i></button>
-                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Justify Align"><i class="fas fa-align-justify"></i></button>
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Left Align" data-command="justifyLeft"><i class="fas fa-align-left"></i></button>
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Center Align" data-command="justifyCenter"><i class="fas fa-align-center"></i></button>
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Right Align" data-command="justifyRight"><i class="fas fa-align-right"></i></button>
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Justify Align" data-command="justifyFull"><i class="fas fa-align-justify"></i></button>
 
 
 
@@ -31,33 +31,60 @@
                     <button type="button" class="btn btn-outline-secondary rounded-0" onclick="lwcasefun()" title="Losercase Text">Lower Case</button>
                     <button type="button" class="btn btn-outline-secondary rounded-0" onclick="capcasefun()" title="Capitalize Text">Capitalize Case</button>
 
-                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Order List"><i class="fas fa-list-ol"></i></button>
-                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Unorder List"><i class="fas fa-list-ul"></i></button>
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="subscript" data-command="subscript"><i class="fas fa-subscript"></i></button>
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="superscript" data-command="superscript"><i class="fas fa-superscript"></i></button>
 
-                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Select All"><i class="fas fa-check"></i></button>
-                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Backspace"><i class="fas fa-backspace"></i></button>
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Horizontal ruler" data-command="insertHorizontalRule"><i class="fas fa-ruler"></i></button>
+
+
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Order List" data-command="insertOrderedList"><i class="fas fa-list-ol"></i></button>
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Unorder List" data-command="insertUnorderedList"><i class="fas fa-list-ul"></i></button>
+
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Select All" data-command="selectAll"><i class="fas fa-check"></i></button>
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Backspace" data-command="delete"><i class="fas fa-backspace"></i></button>
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Backspace" data-command="forwardDElete"><i class="fas fa-trash-alt"></i></button>
                     
-                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Copy"><i class="fas fa-copy"></i></button>
-                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Cut"><i class="fas fa-cut"></i></button>
-                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Paste"><i class="fas fa-paste"></i></button>
 
-                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Redo"><i class="fas fa-redo"></i></button>
-                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Undo"><i class="fas fa-undo"></i></button>
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Copy" data-command="copy"><i class="fas fa-copy"></i></button>
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Cut" data-command="cut"><i class="fas fa-cut"></i></button>
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Paste" data-command="paste"><i class="fas fa-paste"></i></button>
 
-                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Link"><i class="fas fa-link"></i></button>
-                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Unlink"><i class="fas fa-unlink"></i></button>
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Redo" data-command="redo"><i class="fas fa-redo"></i></button>
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Undo" data-command="undo"><i class="fas fa-undo"></i></button>
 
-                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Image"><i class="fas fa-image"></i></button>
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Link" data-command="createLink"><i class="fas fa-link"></i></button>
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Unlink" data-command="unlink"><i class="fas fa-unlink"></i></button>
 
-                    <select name="txtcolor" id="txtcolor" class="btn btn-outline-secondary rounded-0">
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Image" data-command="insertImage"><i class="fas fa-image"></i></button>
+
+                    <select name="txtcolor" id="txtcolor" class="btn btn-outline-secondary rounded-0" data-command="foreColor">
                         <option value="black">Black</option>
+                        <option value="white">White</option>
                         <option value="red">Red</option>
                         <option value="green">Green</option>
                         <option value="blue">Blue</option>
-                    </select>                    
+                    </select>     
+                    
+                    <select name="bgcolor" id="bgcolor" class="btn btn-outline-secondary rounded-0" data-command="backColor">
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                    </select> 
 
-                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Clear Text">Clear</button>
+                    <select name="fntname" id="fntname" class="btn btn-outline-secondary rounded-0" data-command="fontName">
+                        <option value="arial">arial</option>
+                        <option value="century">century</option>
+                        <option value="sans-serif">sans-serif</option>
+                        <option value="time new roman">time new roman</option>
+                    </select> 
 
+
+
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Clear Text" data-command="cleartext">Clear</button>
+                    <button type="button" class="btn btn-outline-secondary rounded-0" title="Remove Format" data-command="removeFormat">Remove Format</button>
+                    <!-- remove format don't remove ul ol list style -->
                     
                 </div>
 
@@ -87,3 +114,6 @@
         <script src="./app.js" type="text/javascript"></script>
     </body>
 </html>
+
+
+<!-- 1TE -->

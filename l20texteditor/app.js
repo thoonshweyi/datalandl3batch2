@@ -12,9 +12,32 @@ getbtns.forEach(function(getbtn){
         var getcommand = getbtn.dataset['command'];
         // console.log(getcommand);
 
-        document.execCommand(getcommand,false,null);
+        if(getcommand === 'cleartext'){
+            getdivarea.innerHTML = '';
+        }else if(getcommand === "createLink" || getcommand === 'insertImage'){
+            //                  message                     default
+            let geturl = prompt('Enter your website link','https://');
+            document.execCommand(getcommand,false,geturl);
+        }else if(getcommand === 'foreColor'){
+            console.log(getbtn.value);
+            document.execCommand(getcommand,false,getbtn.value);
+        }else if(getcommand === 'backColor'){
+            document.execCommand(getcommand,false,getbtn.value);
+        }else if(getcommand === 'fontName'){
+            document.execCommand(getcommand,false,getbtn.value);
+        }else if(getcommand === 'paste'){
+            navigator.clipboard.readText().then(function(cliptext){
+                getdivarea.innerHTML += cliptext;
+            });
+        }
+        else{
+            document.execCommand(getcommand,false,null);
+        }
     });
 });
+// catjpg link
+// https://img.freepik.com/premium-vector/cat-head-emoticon-funny-decorative-drawn-cat-face-character-avatar-vector-illustration-domestic-pet_87946-2415.jpg?w=360
+
 
 // function boldfun(){
 //     gettxtarea.style.fontWeight = "bold";
@@ -63,3 +86,5 @@ function clearfun(){
 // execCommand(aCommandName,aShowDefaultUI,aValueArgument);
 
 // aShowDefaultUI  = true,false
+
+// 26TE
