@@ -1,32 +1,25 @@
 const getbox = document.querySelector('.box');
 const getbtns = document.querySelector('.btns');
-const getboxtitle = document.getElementById('boxtitle');
+const btnicons = document.querySelectorAll('.btn-icon');
 
-getbox.addEventListener('click',function(e){
-    // getbtns.classList.toggle('show');
-    getbtns.classList.add('show');
-    // console.log(e.target);
-    smallmenu(e.target);
+var boxwidth = getbox.clientWidth;
+// console.log(boxwidth);
+getbox.addEventListener('click',function(){
+    getbtns.classList.toggle('show');
+
+    btnicons.forEach(function(btnicon,idx){
+        // console.log(getbox.offsetTop);
+        btnicon.style.top = `${getbox.offsetTop+(idx+1)*40}px`;
+    });
 });
-getbox.addEventListener('dblclick',function(){
-    getbtns.classList.remove('show');
-});
+
 dragme(getbox);
 function dragme(getele){
     // console.log(getele);
 
     var getcx,getcy,setcx,setcy;
     
-    //design 1
-    // getele.onmousedown = getmousedown;
-    
-    //design 2
-    // to prevent icon drag move box
-    // if(getboxtitle){
-    if(getele){
-        getboxtitle.onmousedown = getmousedown;
-    }
-
+    getele.onmousedown = getmousedown;
     function getmousedown(e){
         // console.log('i am working');
         // console.log(e.target);
@@ -39,9 +32,6 @@ function dragme(getele){
         document.onmouseup = stopdragme;
 
         // console.log('step 1',getcx,getcy);
-
-        // to store icon
-        getbtns.classList.remove('show');
 
     }
 
@@ -72,22 +62,15 @@ function dragme(getele){
 
         // console.log(btnleft-setcx,btntop-setcy);
 
-        // to store icon
-        // getbtns.classList.remove('show');
+        btnicons.forEach(function(btnicon,idx){
+                                //move to the btn center
+            btnicon.style.left = `${btnleft+(boxwidth/2-16)}px`;
+            btnicon.style.top = `${btntop}px`;
+            // btnicon.style.top = `${top+40*(idx+1)}px`;
+        });
     }
     function stopdragme(){
         document.onmousemove = null;
         document.onmouseup = null;
     }
 }
-
-function smallmenu(iconbox){
-    // console.log(iconbox);
-    if(iconbox.classList.contains('btn-icon')){
-        console.log('yes');
-    }else{
-        console.log('no');
-    }
-}
-
-// 21MM

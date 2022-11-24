@@ -1,6 +1,10 @@
+*{
+    box-sizing: border-box
+}
 body{
     font-family: sans-serif;
     height: 100vh;
+    /* background-color: #666; */
 
     display: flex;
     justify-content: center;
@@ -8,6 +12,33 @@ body{
 
 }
 .phone{
+    position: relative;
+}
+.phone::before{
+    content: '';
+    width: 4px;
+    height: 100px;
+    background-color: #000;
+    border-radius: 4px 0px 0px 4px;
+
+    position: absolute;
+    left: 0;
+    top: 20%;
+    transform: translate(-100%);
+}
+.phone::after{
+    content: '';
+    width: 4px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 0px 4px 4px 0px;
+
+    position: absolute;
+    right: 0;
+    top: 20%;
+    transform: translate(100%);
+}
+.phone-container{
     width: 260px;
     height: 500px;
     border: 4px solid rgba(0, 0, 0, 1);
@@ -30,6 +61,8 @@ body{
 
     overflow: hidden;
 }
+
+
 .time{
     font-size: 55px;
 }
@@ -43,8 +76,8 @@ body{
     border-radius: 50%;
 
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: 10px;
+    top: 10px;
 
     display: flex;
     justify-content: center;
@@ -62,4 +95,68 @@ body{
     background-color: #999;
     border-radius: 2px;
     margin: 2px;
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 10px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(0);
+
+    /* transform-origin: left top; */
+
+}
+.assistantmenu.show{
+    background-color: transparent;
+}
+.assistantmenu.show .menu{
+    transition: all 0.7s;
+    transform: translate(-50%,-50%) scale(1);
+}
+.assistantmenu.show .menucontainer{
+    visibility: hidden;
+}
+.menuitem{
+    width: calc(100% / 3);
+    height: 60px;
+    /* background-color: red; */
+    color: #ccc;
+    margin: 0;
+    float: left;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menucontrol{
+    width: calc(100% - 20px);
+    /* background-color: #f4fa9c; */
+    font-size: 9px;
+
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+
+    display: flex;
+    justify-content: space-between;
+}
+.menucontrol a{
+    color: #ccc;
+}
+.menuindicator a{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-bottom: 2px;
 }

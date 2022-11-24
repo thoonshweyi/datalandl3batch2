@@ -2,23 +2,45 @@
 <html>
     <head>
         <title>Assistant Menu</title>
+        <!-- fontawesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href="./style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         
         <div class="phone">
-            <div class="time">
-                <span id="hour">00</span>
-                <span id="minute">00</span>
-            </div>
-            <div class="date">Tue, November 1, 2022</div>
+            <div class="phone-container">
+                <div class="time">
+                    <span id="hour">00</span>
+                    <span id="minute">00</span>
+                </div>
+                <div class="date">Tue, November 1, 2022</div>
+    
+                <div class="assistantmenu">
+                    <div class="menucontainer">
+                        <div class="menuicon"></div>
+                        <div class="menuicon"></div>
+                        <div class="menuicon"></div>
+                        <div class="menuicon"></div>
+                    </div>
+                    <ul class="menu">
+                        <li class="menuitem"><i class="fas fa-ellipsis-v"></i></li>
+                        <li class="menuitem"><i class="fas fa-home"></i></li>
+                        <li class="menuitem"><i class="fas fa-arrow-left"></i></li>
+                        <li class="menuitem"><i class="fas fa-power-off"></i></i></li>
+                        <li class="menuitem"><i class="fas fa-volume-up"></i></li>
+                        <li class="menuitem"><i class="fas fa-image"></i></li>
 
-            <div class="assistantmenu">
-                <div class="menucontainer">
-                    <div class="menuicon"></div>
-                    <div class="menuicon"></div>
-                    <div class="menuicon"></div>
-                    <div class="menuicon"></div>
+                        <li class="menucontrol">
+                            <a href="#"><i class="fas fa-less-than"></i></a>
+                            <div class="menuindicator">
+                                <a href="#" class="dots"></a>
+                                <a href="#" class="dots"></a>
+                                <a href="#" class="dots"></a>
+                            </div>
+                            <a href="#"><i class="fas fa-greater-than"></i></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

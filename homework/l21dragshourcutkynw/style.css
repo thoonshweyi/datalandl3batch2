@@ -17,59 +17,44 @@ body{
 
     position: absolute;
     cursor: move;
-
-    z-index: 100;
 }
 #boxtitle{
     padding: 10px;
 }
 .btn-icon{
-    width: 4rem;
-    height: 4rem;
-    background-color: #d918b9;
+    width: 2rem;
+    height: 2rem;
+    background-color: steelblue;
     color: #fff;
-    font-size: 1rem;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+    bottom: 0;
 
     margin: 2px 0px;
     cursor: pointer;
 
-    visibility: hidden;
+    transition: all 0.5s;
 
-    transition: all 0.3s;
+    z-index: -1;
 }
-.btns.show .btn-icon{
-    visibility: visible;
-}
+
 .btns.show .btn-icon:nth-of-type(1){
-    background-color: darkblue;
-    left: 50%;
-    top: -80px;
-    transform: translateX(-50%);
+    left: 0;
+    bottom: 40px;
 }
 .btns.show .btn-icon:nth-of-type(2){
-    background-color: skyblue;
-    left: 120%;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 50px;
+    bottom: 40px;
 }
 .btns.show .btn-icon:nth-of-type(3){
-    background-color: darkgreen;
-    left: 50%;
-    top: 55px;
-
-    transform: translateX(-50%);
+    left: 0;
+    bottom: 80px;
 }
 .btns.show .btn-icon:nth-of-type(4){
-    left: -100%;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 50px;
+    bottom: 80px;
 }
