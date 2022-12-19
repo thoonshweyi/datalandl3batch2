@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Triangle</title>
+        <style type="text/css">
+            body{
+                height: 100vh;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .box{
+                width: 0px;
+                height: 0px;
+
+                margin: 10px;
+            }
+            .box.one{
+                border-width: 10px 10px 10px 10px;
+                border-style: solid;
+                border-color: red green blue black;
+            }
+            .box.two{
+                border-width: 10px 0px 10px 10px;
+                border-style: solid;
+                border-color: red green blue black;
+            }
+            .box.three{
+                border-width: 10px 10px 0px 0px;
+                border-style: solid;
+                border-color: red green blue black;
+            }
+            .box.four{
+                border-width: 0px 10px 10px 0px;
+                border-style: solid;
+                border-color: red green blue black;
+            }
+        </style>
+    </head>
+    <body>
+         
+        <div class="box one"></div>
+        <div class="box two"></div>
+        <div class="box three"></div>
+        <div class="box four"></div>
+
+
+    </body>
+</html>
