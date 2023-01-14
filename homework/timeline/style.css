@@ -69,6 +69,8 @@ h1{
     /* background-color: #1f4287; */
     
     position: relative;
+
+    /* transition: left 0.5s; */
 }
 .timeline-item.left{
     left: 0;
