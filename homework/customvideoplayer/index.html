@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Custom Video Player</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="./style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+       
+        <div class="container">
+            <h1>Custom Video Player</h1>
+            <div class="video-container">
+                <p class="video-title">Sample Title</p>
+                <video id="videoscreen" class="videoscreen"></video>
+                <div class="controls-container">
+                    <div class="progress-container"><div class="progress"></div></div>
+                    <div class="controls-group">
+                        <div class="form-group">
+                            <i class="fas fa-volume-up"></i>
+                            <input type="range" name="volume" id="volumecontrol" class="volumecontrol" min="0" max="100" step="1" value="100"/>
+                        </div>
+                        <div class="btns-container">
+                            <span id="vdcurtime" class="displaytime">00:00</span>
+                            <button type="button" id="prev" class="control-btns"><i class="fas fa-backward"></i></button>
+                            <button type="button" id="play" class="control-btns play"><i class="fas fa-play"></i></button>
+                            <button type="button" id="next" class="control-btns"><i class="fas fa-forward"></i></button>
+                            <span id="vdduration" class="displaytime">00:00</span>
+                        </div>
+                        <button type="button" id="fullscreen" class="control-btns"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <script src="./app.js" type="text/javascript"></script>
+    </body>
+</html>
